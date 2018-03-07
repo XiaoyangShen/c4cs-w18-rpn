@@ -5,6 +5,6 @@ python:
 install:
   - pip install coveralls coverage
 script:
-  - coverage run pytest # or py.test for Python versions 3.5 and below
+  - coverage run test_rpn.py # or py.test for Python versions 3.5 and below
 after_success:
   - coveralls
