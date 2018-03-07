@@ -32,6 +32,7 @@ def main():
     while True:
         result = calculate(input("rpn calc> "))
         print("Result: ", result)
+    print("Some words never printed")
 
 if __name__ == '__main__':
     main()
