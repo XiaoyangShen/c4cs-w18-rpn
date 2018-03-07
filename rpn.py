@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 import operator
-
+import readline
+from termcolor import colored
 
 operators = {
     '+': operator.add,
@@ -9,6 +10,7 @@ operators = {
     '*': operator.mul,
     '/': operator.truediv,
     '^': operator.pow,
+    '%': operator.mod,
 }
 
 def calculate(myarg):
@@ -30,8 +32,8 @@ def calculate(myarg):
 
 def main():
     while True:
-        result = calculate(input("rpn calc> "))
-        print("Result: ", result)
+        result = calculate(input(colored("rpn calc> ", 'green')))
+        print(colored("Result: ", 'red'), result)
     print("Some words never printed")
 
 if __name__ == '__main__':
